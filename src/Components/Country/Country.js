@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Country = (props) => {
-    const {name,popukation,region} = props.country;
+    const {name,population,region} = props.country;
     return (
         <div>
-            <h2>This is a {props.country.name}</h2>
-            <p>population: {props.country.population}</p>
-            <p><small>Region: {props.country.region}</small></p>
+            <h2>This is a {name}</h2>
+            <p>population: {population}</p>
+            <p><small>Region: {region}</small></p>
         </div>
     );
 };
