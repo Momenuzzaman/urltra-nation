@@ -2,6 +2,7 @@ import React from 'react';
 
 const Country = (props) => {
     const {name,population,region} = props.country;
+    const =' shakib'
     return (
         <div>
             <h2>This is a {name}</h2>
