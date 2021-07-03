@@ -22,7 +22,7 @@ function App() {
      
        {
          countries.map(country => <Country country =
-          {country}></Country>)
+          {country} key={country.alpha3Code}></Country>)
        }
     </div>
   );
