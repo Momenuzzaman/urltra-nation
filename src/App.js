@@ -9,20 +9,22 @@ function App() {
   useEffect (()=>{
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res => res.json())
-    .then(data => {
-      setCountries(data)
-      console.log(data);
-    //  const names =  data.map(country => country.name);
-    //  console.log(names);
-    });
+    .then(data =>  setCountries(data));
   }, []);
+
+  const  handleAddCountry = (country) => {console.log(country)};
   return (
     <div className="App">
      <h1>country loaded: {countries.length}</h1>
+     <h1>Country Add:</h1>
      
        {
-         countries.map(country => <Country country =
-          {country} key={country.alpha3Code}></Country>)
+         countries.map(country => <Country country ={country}
+           key={country.alpha3Code}
+           handleAddCountry = {handleAddCountry}
+          >
+
+          </Country>)
        }
     </div>
   );
